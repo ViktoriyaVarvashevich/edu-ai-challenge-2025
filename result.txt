@@ -1,0 +1,30 @@
+Let's analyze the project requirements step by step using Chain-of-Thought (CoT) reasoning to determine the most suitable type of database.
+
+1. **Millions of users (high scalability)**
+   - The system needs to handle a large volume of data and concurrent users.
+   - This requires horizontal scalability — the ability to distribute data across multiple servers.
+   - NoSQL databases (e.g., document-based or graph databases) are better at horizontal scaling compared to traditional relational databases.
+
+2. **Need to store user profiles, posts, and connections between users**
+   - Profiles and posts are structured, but can vary in format (e.g., different profile fields, media in posts).
+   - Document-based databases such as MongoDB are suitable for this, as they support flexible schemas.
+   - Connections between users (friends, followers) represent relationships that are naturally modeled as a graph.
+   - Graph databases like Neo4j are excellent for storing and querying relationships.
+
+3. **High data read speed (80% read, 20% write operations)**
+   - Read-heavy workloads require databases with efficient indexing, replication, and caching support.
+   - Document and graph databases can be optimized for high read performance.
+   - Relational databases can also perform well on reads but may face scalability issues with large-scale data.
+
+4. **Scalability as the user base grows**
+   - The database should scale as the platform grows. Both document and graph databases support horizontal scaling.
+   - Cloud-based NoSQL solutions (e.g., Amazon DynamoDB or Google Firestore) offer auto-scaling capabilities.
+   - Graph databases can become a bottleneck at very large scale if not properly designed.
+
+**Conclusion:**
+
+Considering all the requirements, a **hybrid approach** may be the most suitable:
+- Use a **document-based database** like MongoDB to store user profiles and posts — it offers high read speed, schema flexibility, and scalability.
+- Use a **graph database** like Neo4j for managing user relationships — it enables efficient social network queries such as mutual friends and recommendations.
+
+If only one database type must be chosen, the most balanced solution is a **document-based NoSQL database** like **MongoDB**, which provides good scalability, read performance, and schema flexibility while also supporting simple relationship structures.
