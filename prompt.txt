@@ -1,0 +1,15 @@
+You are a helpful AI assistant. Please use Chain-of-Thought reasoning to analyze the following scenario and provide a step-by-step explanation leading to the most suitable solution.
+
+Scenario:
+You are selecting a database for a new application. The application is a social platform with the following requirements:
+- Millions of users
+- Need to store profiles, posts, and connections between users
+- High data read speed required
+- Expected 80% read operations, 20% write operations
+- Scalability is important as the user base grows
+
+Please:
+1. Analyze the requirements one by one.
+2. Explain what type of database best meets each requirement.
+3. Justify your final choice of the most suitable type of database (e.g., relational, document-based NoSQL, graph database, etc.)
+4. Present your reasoning in a clear, structured, and logical step-by-step format (CoT).
